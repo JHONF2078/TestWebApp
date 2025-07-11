@@ -9,8 +9,8 @@ using TestWebApp.DataAccess.Context;
 namespace TestWebApp.DataAccess.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250711180942_Initial-Migration")]
-    partial class InitialMigration
+    [Migration("20250711182853_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

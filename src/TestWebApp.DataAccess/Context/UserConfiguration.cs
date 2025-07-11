@@ -14,7 +14,8 @@ namespace TestWebApp.DataAccess.Configurations
 
             e.Property(e => e.Id)
                 .HasColumnName("usuId")
-                .HasColumnType("numeric(18, 0)");
+                .HasColumnType("numeric(18, 0)")
+                 .ValueGeneratedOnAdd();
 
             e.Property(e => e.name)
                 .HasColumnName("nombre")
