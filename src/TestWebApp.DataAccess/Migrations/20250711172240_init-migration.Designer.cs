@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestWebApp.DataAccess.Context;
 
-namespace TestWebApp.DataAccess.Data.Migrations
+namespace TestWebApp.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250710145345_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250711172240_init-migration")]
+    partial class initmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,11 +22,10 @@ namespace TestWebApp.DataAccess.Data.Migrations
 
             modelBuilder.Entity("TestWebApp.Entities.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<decimal>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("usuId")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("numeric(18, 0)");
 
                     b.Property<string>("lastName")
                         .IsRequired()
@@ -47,31 +46,31 @@ namespace TestWebApp.DataAccess.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = 1m,
                             lastName = "Pérez",
                             name = "Juan"
                         },
                         new
                         {
-                            Id = 2,
+                            Id = 2m,
                             lastName = "García",
                             name = "Ana"
                         },
                         new
                         {
-                            Id = 3,
+                            Id = 3m,
                             lastName = "Martínez",
                             name = "Luis"
                         },
                         new
                         {
-                            Id = 4,
+                            Id = 4m,
                             lastName = "López",
                             name = "María"
                         },
                         new
                         {
-                            Id = 5,
+                            Id = 5m,
                             lastName = "Ramírez",
                             name = "Carlos"
                         });

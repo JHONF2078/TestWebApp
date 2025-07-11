@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace TestWebApp.DataAccess.Data.Migrations
+namespace TestWebApp.DataAccess.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,8 +10,7 @@ namespace TestWebApp.DataAccess.Data.Migrations
                 name: "Usuario",
                 columns: table => new
                 {
-                    usuId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    usuId = table.Column<decimal>(type: "numeric(18, 0)", nullable: false),
                     nombre = table.Column<string>(maxLength: 100, nullable: false),
                     apellido = table.Column<string>(maxLength: 100, nullable: false)
                 },
@@ -25,11 +24,11 @@ namespace TestWebApp.DataAccess.Data.Migrations
                 columns: new[] { "usuId", "apellido", "nombre" },
                 values: new object[,]
                 {
-                    { 1, "Pérez", "Juan" },
-                    { 2, "García", "Ana" },
-                    { 3, "Martínez", "Luis" },
-                    { 4, "López", "María" },
-                    { 5, "Ramírez", "Carlos" }
+                    { 1m, "Pérez", "Juan" },
+                    { 2m, "García", "Ana" },
+                    { 3m, "Martínez", "Luis" },
+                    { 4m, "López", "María" },
+                    { 5m, "Ramírez", "Carlos" }
                 });
         }
 
