@@ -25,7 +25,8 @@ namespace TestWebApp.Api
                 try
                 {
                     var context = services.GetRequiredService<AppDbContext>();
-                    context.Database.Migrate(); // Aplica migraciones pendientes
+                    context.Database.Migrate(); // migraciones
+                    UserSeeder.SeedInitialUsers(context); //semilla
                 }
                 catch (Exception ex)
                 {
