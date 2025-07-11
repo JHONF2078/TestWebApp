@@ -1,10 +1,14 @@
-TestWebApp – Inicio rápido
+# 🧪 TestWebApp – Inicio rápido
 
-Backend (.NET Core)
-# Abrir desde Visual Studio
-# Proyecto de inicio: TestWebApp.Api
+## 🔧 Backend (.NET Core)
+
+Abrir la solución en **Visual Studio**  
+Seleccionar como proyecto de inicio: `TestWebApp.Api`  
+Ejecutar con **F5** o **Ctrl + F5**
 
 
-Frontend (Angular)
-# npm install
-# npm start
+## 🌐 Frontend (Angular)
+
+```bash
+npm install
+npm start
