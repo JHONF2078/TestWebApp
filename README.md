@@ -11,4 +11,4 @@ Ejecutar con **F5** o **Ctrl + F5**
 
 ```bash
 npm install
-npm start
+ng serve -o
