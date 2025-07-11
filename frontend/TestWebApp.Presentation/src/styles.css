@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+table.mat-table {
+  border-collapse: collapse;
+}
+
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell {
+  border: 1px solid #9e9e9e;
+}
+
+table.mat-table {
+  border: 1px solid #9e9e9e;
+}
