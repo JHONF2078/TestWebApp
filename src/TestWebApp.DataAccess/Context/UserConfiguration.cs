@@ -18,13 +18,11 @@ namespace TestWebApp.DataAccess.Configurations
 
             e.Property(e => e.name)
                 .HasColumnName("nombre")
-                .HasMaxLength(100)
-                .IsRequired();
+                .HasMaxLength(100);                
 
             e.Property(e => e.lastName)
                 .HasColumnName("apellido")
-                .HasMaxLength(100)
-                .IsRequired();
+                .HasMaxLength(100);            
 
             
             e.HasData(

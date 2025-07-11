@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace TestWebApp.DataAccess.Migrations
+namespace TestWebApp.DataAccess.Data.Migrations
 {
-    public partial class initmigration : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,8 +11,8 @@ namespace TestWebApp.DataAccess.Migrations
                 columns: table => new
                 {
                     usuId = table.Column<decimal>(type: "numeric(18, 0)", nullable: false),
-                    nombre = table.Column<string>(maxLength: 100, nullable: false),
-                    apellido = table.Column<string>(maxLength: 100, nullable: false)
+                    nombre = table.Column<string>(maxLength: 100, nullable: true),
+                    apellido = table.Column<string>(maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {

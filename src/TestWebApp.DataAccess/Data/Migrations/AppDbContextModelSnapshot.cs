@@ -2,17 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestWebApp.DataAccess.Context;
 
-namespace TestWebApp.DataAccess.Migrations
+namespace TestWebApp.DataAccess.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250711172240_init-migration")]
-    partial class initmigration
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,13 +26,11 @@ namespace TestWebApp.DataAccess.Migrations
                         .HasColumnType("numeric(18, 0)");
 
                     b.Property<string>("lastName")
-                        .IsRequired()
                         .HasColumnName("apellido")
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
                     b.Property<string>("name")
-                        .IsRequired()
                         .HasColumnName("nombre")
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
